@@ -1,0 +1,109 @@
+version: '3.8'
+
+services:
+  # Redis - Session Storage
+  redis:
+    image: redis:7-alpine
+    container_name: aoi-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    networks:
+      - aoi-network
+
+  # Weaviate - Vector Database
+  weaviate:
+    image: semitechnologies/weaviate:1.22.4
+    container_name: aoi-weaviate
+    ports:
+      - "8080:8080"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: 'text2vec-openai,text2vec-cohere,text2vec-huggingface,ref2vec-centroid,generative-openai,qna-openai'
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v1/.well-known/ready"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    networks:
+      - aoi-network
+
+  # Weaviate Text2Vec Transformers (Optional - for local embeddings)
+  # Uncomment if you want to use local embeddings instead of Jina
+  # t2v-transformers:
+  #   image: semitechnologies/transformers-inference:sentence-transformers-multi-qa-MiniLM-L6-cos-v1
+  #   container_name: aoi-transformers
+  #   environment:
+  #     ENABLE_CUDA: '0'
+  #   networks:
+  #     - aoi-network
+
+  # Grafana - Monitoring (Optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: aoi-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - aoi-network
+    profiles:
+      - monitoring
+
+  # Prometheus - Metrics Collection (Optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: aoi-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - aoi-network
+    profiles:
+      - monitoring
+
+volumes:
+  redis_data:
+    driver: local
+  weaviate_data:
+    driver: local
+  grafana_data:
+    driver: local
+  prometheus_data:
+    driver: local
+
+networks:
+  aoi-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
