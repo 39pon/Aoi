@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e068c75b-d7fa-4b21-8909-3b972d449672",
+    "name": "人格データ同期",
+    "data_type": "personality",
+    "source_platforms": [
+      "trae_ide"
+    ],
+    "target_platforms": [
+      "browser",
+      "obsidian",
+      "raycast"
+    ],
+    "frequency": "real_time",
+    "security_level": "internal",
+    "filters": {},
+    "transformations": [],
+    "enabled": true,
+    "created_at": "2025-08-24T17:12:40.975315",
+    "updated_at": "2025-08-24T17:12:40.975323"
+  },
+  {
+    "id": "e7822c81-dcc8-44f1-9d8a-069d30dc8246",
+    "name": "記憶データ同期",
+    "data_type": "memory",
+    "source_platforms": [
+      "browser",
+      "obsidian",
+      "raycast",
+      "trae_ide",
+      "mobile_app",
+      "desktop_app",
+      "api_client"
+    ],
+    "target_platforms": [
+      "browser",
+      "obsidian",
+      "raycast",
+      "trae_ide",
+      "mobile_app",
+      "desktop_app",
+      "api_client"
+    ],
+    "frequency": "every_5_minutes",
+    "security_level": "confidential",
+    "filters": {},
+    "transformations": [],
+    "enabled": true,
+    "created_at": "2025-08-24T17:12:40.975344",
+    "updated_at": "2025-08-24T17:12:40.975345"
+  },
+  {
+    "id": "c2cd3314-5c42-4cec-8ad9-741759eed5c2",
+    "name": "設定同期",
+    "data_type": "preferences",
+    "source_platforms": [
+      "browser",
+      "obsidian",
+      "raycast",
+      "trae_ide",
+      "mobile_app",
+      "desktop_app",
+      "api_client"
+    ],
+    "target_platforms": [
+      "browser",
+      "obsidian",
+      "raycast",
+      "trae_ide",
+      "mobile_app",
+      "desktop_app",
+      "api_client"
+    ],
+    "frequency": "every_minute",
+    "security_level": "internal",
+    "filters": {},
+    "transformations": [],
+    "enabled": true,
+    "created_at": "2025-08-24T17:12:40.975358",
+    "updated_at": "2025-08-24T17:12:40.975359"
+  }
+]

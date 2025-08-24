@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-08-24T17:33:07.205436",
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "test_results": [
+    {
+      "test": "system_info",
+      "status": "PASS",
+      "message": "システム情報の取得に成功"
+    },
+    {
+      "test": "system_initialization",
+      "status": "PASS",
+      "message": "初期化時間: 0.01秒"
+    },
+    {
+      "test": "event_system",
+      "status": "PASS",
+      "message": "イベントシステム正常動作"
+    },
+    {
+      "test": "platform_adapters",
+      "status": "PASS",
+      "message": "プラットフォームアダプター正常動作"
+    },
+    {
+      "test": "data_sync",
+      "status": "PASS",
+      "message": "データ同期機能正常動作"
+    },
+    {
+      "test": "configuration_management",
+      "status": "PASS",
+      "message": "設定管理機能正常動作"
+    },
+    {
+      "test": "scalability",
+      "status": "PASS",
+      "message": "スケーラビリティテスト成功 (493件/秒, 27324プラットフォーム/秒)"
+    },
+    {
+      "test": "performance",
+      "status": "PASS",
+      "message": "パフォーマンステスト成功 (60059件/秒, 0.0MB)"
+    }
+  ],
+  "performance_metrics": {
+    "initialization_time": 0.006407976150512695,
+    "scalability_events_count": 1000,
+    "scalability_processing_time": 2.027329921722412,
+    "scalability_events_per_second": 493.2596265093368,
+    "scalability_platforms_count": 50,
+    "scalability_registration_time": 0.0018298625946044922,
+    "scalability_platforms_per_second": 27324.456026058633,
+    "performance_data_count": 5000,
+    "performance_processing_time": 0.0832509994506836,
+    "performance_data_per_second": 60059.33902285354,
+    "performance_memory_usage": 0
+  }
+}

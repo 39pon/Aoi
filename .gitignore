@@ -198,6 +198,9 @@ cython_debug/
 .agno/
 agno.log
 
+# Development planning (local only)
+DEVELOPMENT_PLAN.md
+
 # Local data
 obsidian-data/
 !obsidian-data/.gitkeep

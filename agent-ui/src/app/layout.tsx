@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${dmMono.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${dmMono.variable} antialiased`} suppressHydrationWarning>
         <NuqsAdapter>{children}</NuqsAdapter>
         <Toaster />
       </body>
