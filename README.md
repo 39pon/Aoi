@@ -1,32 +1,44 @@
 # Aoi - Universal AI Agent Ecosystem
 
+**🌐 Language**: [English](README.md) | [日本語](README.ja.md)
+
 ![Aoi Logo](https://img.shields.io/badge/Aoi-Universal_AI_Agent-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.11+-green?style=flat-square)
 ![Agno](https://img.shields.io/badge/Agno-Framework-orange?style=flat-square)
 ![Gemini](https://img.shields.io/badge/Gemini-LLM-purple?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=flat-square)
 
 ## 📖 Overview
 
-**Aoi** is a universal AI agent ecosystem that integrates cutting-edge AI technologies. Built on the Agno framework and combining Gemini LLM, Weaviate, Jina, Redis, and Obsidian, it delivers high-performance and highly scalable AI agents.
+**Aoi (葵)** is a revolutionary cross-platform AI agent ecosystem that seamlessly integrates with your daily workflow. Named after the Japanese word for "hollyhock," Aoi embodies growth, adaptability, and natural intelligence.
+
+### 🌟 What Makes Aoi Special
+
+**Aoi** represents the culmination of modern AI agent technology, featuring:
+- **Cross-Platform Intelligence**: Seamlessly works across Obsidian, browsers, and web interfaces
+- **Persistent Memory**: Remembers context and conversations across all platforms
+- **Personality-Driven Interaction**: Features a caring, knowledgeable AI personality that adapts to your needs
+- **Evidence-Based Responses**: Always provides sources and reasoning for its answers
+- **Real-Time Knowledge Integration**: Automatically syncs with your Obsidian knowledge base
 
 ### 🎯 Key Features
 
-- **🤖 Universal Agent**: Versatile AI agent capable of handling any task
-- **🧠 Advanced Reasoning**: High-performance reasoning powered by Agno framework
-- **📚 Knowledge Base**: Knowledge extraction from Obsidian-managed .md files
-- **🔍 Vector Search**: High-precision semantic search with Weaviate + Jina
-- **💾 Session Management**: Persistent conversation history with Redis
-- **🌐 Web UI**: Intuitive and beautiful user interface
+- **🌐 Cross-Platform Integration**: Works seamlessly across Obsidian, browsers, and web interfaces
+- **🧠 Intelligent Memory System**: Persistent memory that spans all platforms and conversations
+- **👥 Adaptive Personality**: Three distinct personality modes (Professional, Caring Sister, Casual)
+- **📚 Knowledge Base Integration**: Real-time sync with your Obsidian vault
+- **🔍 Evidence-Based AI**: Always provides sources and reasoning for responses
+- **⚡ Real-Time Sync**: Instant synchronization across all connected platforms
 
-## ⚡ Features
+## ⚡ Platform Integrations
 
-### 🔧 Core Capabilities
+### 🔧 Available Platforms
 
-- **Multimodal Support**: Processing text, images, audio, and video
-- **Real-time Reasoning**: Fast response generation and decision making
-- **Knowledge Integration**: Automatic knowledge extraction from Obsidian vaults
-- **Session Persistence**: Long-term memory for contextual understanding
-- **Custom Tools**: Extensible tool system
+- **📝 Obsidian Plugin**: Native integration with your knowledge management workflow
+- **🌐 Browser Extension**: AI assistance on any website with context awareness
+- **💻 Web Interface**: Full-featured web application for comprehensive interactions
+- **🔗 Cross-Platform Memory**: Seamless conversation continuity across all platforms
+- **📊 Unified Dashboard**: Monitor and manage AI interactions from a single interface
 
 ### 🛠️ Technology Stack
 
@@ -44,46 +56,70 @@
 ## 🏗️ Architecture
 
 ```
-Aoi Ecosystem
-┌─────────────────────────────────────────────────────────┐
-│                    Web UI (Next.js)                    │
-├─────────────────────────────────────────────────────────┤
-│                  API Gateway (FastAPI)                 │
-├─────────────────────────────────────────────────────────┤
-│                 Aoi Agent (Agno Core)                  │
-├─────────────────┬─────────────────┬─────────────────────┤
-│   Gemini LLM    │  Vector Search  │   Session Store     │
-│   (Reasoning)   │  (Weaviate+Jina)│     (Redis)        │
-├─────────────────┴─────────────────┴─────────────────────┤
-│              Knowledge Base (Obsidian)                 │
-└─────────────────────────────────────────────────────────┘
+Aoi Cross-Platform Ecosystem
+┌─────────────────────────────────────────────────────────────────┐
+│                     Cross-Platform Layer                       │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│  Obsidian Plugin│ Browser Extension│      Web Interface          │
+│   (Knowledge)   │  (Web Context)  │    (Full Features)          │
+├─────────────────┴─────────────────┴─────────────────────────────┤
+│                    Unified Memory System                       │
+│              (Cross-Platform Synchronization)                  │
+├─────────────────────────────────────────────────────────────────┤
+│                     Core Agent (Agno)                          │
+│                  ┌─────────────────────┐                       │
+│                  │   Aoi Personality   │                       │
+│                  │     (葵 System)     │                       │
+│                  └─────────────────────┘                       │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│   Gemini LLM    │  Vector Search  │      Session Store          │
+│   (Reasoning)   │ (Weaviate+Jina) │       (Redis)              │
+├─────────────────┴─────────────────┴─────────────────────────────┤
+│                   Knowledge Base (Obsidian)                    │
+│                  Real-time Sync & Evidence                     │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ### 📁 Directory Structure
 
 ```
 Aoi/
-├── agent-ui/                 # Next.js Web Interface
-│   ├── src/
-│   │   ├── components/        # UI Components
-│   │   ├── pages/            # Page Definitions
-│   │   └── store/            # State Management
-│   └── package.json
 ├── services/
-│   └── aoi-agent/            # Python Agno Service
+│   └── core-agent/           # Python Agno Core Service
 │       ├── src/
-│       │   ├── agent/        # Agent Implementation
+│       │   ├── aoi/          # Aoi Agent Implementation
+│       │   │   ├── core/     # Core Agent Logic
+│       │   │   ├── memory/   # Cross-Platform Memory
+│       │   │   ├── personality/ # Aoi Personality System
+│       │   │   └── platforms/   # Platform Adapters
 │       │   ├── knowledge/    # Knowledge Base Management
-│       │   ├── tools/        # Custom Tools
+│       │   ├── tools/        # Custom Tools & MCP Integration
 │       │   └── api/          # FastAPI Routes
 │       ├── requirements.txt
 │       ├── Dockerfile
 │       └── .env.example
-├── obsidian-data/            # Knowledge Base (.md files)
-├── docker-compose.yml        # Infrastructure Configuration
-├── README.md                 # English Documentation
-├── README.ja.md             # Japanese Documentation
-└── .env.example             # Environment Variables Template
+├── obsidian-plugin/          # Obsidian Plugin (TypeScript)
+│   ├── main.ts              # Plugin Main Logic (1194 lines)
+│   ├── manifest.json        # Plugin Manifest
+│   ├── settings.ts          # Settings Management
+│   └── README.md            # Plugin Documentation
+├── browser-extension/        # Browser Extension (Manifest V3)
+│   ├── manifest.json        # Extension Manifest
+│   ├── content.js           # Content Script
+│   ├── background.js        # Background Script
+│   └── popup.html           # Extension Popup
+├── agent-ui/                # Next.js Web Interface
+│   ├── src/
+│   │   ├── components/      # UI Components
+│   │   ├── pages/          # Page Definitions
+│   │   └── store/          # State Management
+│   └── package.json
+├── obsidian-data/           # Knowledge Base (.md files)
+├── docker-compose.yml       # Infrastructure Configuration
+├── README.md               # English Documentation
+├── README.ja.md            # Japanese Documentation
+├── DEVELOPMENT_PLAN.md     # Development Roadmap
+└── .env.example            # Environment Variables Template
 ```
 
 ## 🚀 Quick Start
@@ -91,9 +127,11 @@ Aoi/
 ### 📋 Prerequisites
 
 - **Python 3.11+**
-- **Node.js 18+**
+- **Node.js 18+** (for web interface)
 - **Docker & Docker Compose**
 - **Git**
+- **Obsidian** (for plugin integration)
+- **Modern Browser** (Chrome, Firefox, Edge for extension)
 
 ### 🔑 Required API Keys
 
@@ -104,12 +142,20 @@ Obtain the following API keys in advance:
 3. **Weaviate Cloud**: [Weaviate API Key](https://console.weaviate.cloud/) (Optional)
 4. **Agno**: [Agno API Key](https://app.agno.com/) (Optional)
 
+### 🎯 Current Implementation Status
+
+- ✅ **Obsidian Plugin**: Fully implemented with personality system and cross-platform memory
+- ✅ **Browser Extension**: Basic structure ready for implementation
+- ✅ **Core Agent**: Foundation with Agno framework and cross-platform adapters
+- 🚧 **Web Interface**: Planned for future development
+- ✅ **Cross-Platform Memory**: Implemented and tested
+
 ### ⚙️ Installation Steps
 
 #### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/Aoi.git
 cd Aoi
 ```
 
@@ -130,10 +176,39 @@ vim .env
 docker-compose up -d
 ```
 
-#### 4. Start Agno Agent Service
+#### 4. Install Obsidian Plugin
 
 ```bash
-cd services/aoi-agent
+# Copy plugin to Obsidian plugins directory
+cp -r obsidian-plugin/ /path/to/your/vault/.obsidian/plugins/aoi-agent/
+
+# Or create symbolic link for development
+ln -s $(pwd)/obsidian-plugin /path/to/your/vault/.obsidian/plugins/aoi-agent
+```
+
+1. Open Obsidian
+2. Go to Settings → Community Plugins
+3. Enable "Aoi Agent" plugin
+4. Configure memory server URL and platform settings
+
+#### 5. Install Browser Extension (Optional)
+
+**Chrome/Edge:**
+1. Open `chrome://extensions/`
+2. Enable "Developer mode"
+3. Click "Load unpacked"
+4. Select the `browser-extension/` directory
+
+**Firefox:**
+1. Open `about:debugging`
+2. Click "This Firefox"
+3. Click "Load Temporary Add-on"
+4. Select `browser-extension/manifest.json`
+
+#### 6. Start Core Agent Service (Optional)
+
+```bash
+cd services/core-agent
 
 # Create virtual environment
 python -m venv .venv
@@ -146,22 +221,11 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-#### 5. Start Web UI
+#### 7. Access Points
 
-```bash
-cd agent-ui
-
-# Install dependencies
-pnpm install
-
-# Start development server
-pnpm dev
-```
-
-#### 6. Access
-
-- **Web UI**: http://localhost:3000
-- **API**: http://localhost:7777
+- **Obsidian Plugin**: Available in Obsidian command palette (Ctrl/Cmd + P)
+- **Browser Extension**: Click extension icon in browser toolbar
+- **Core Agent API**: http://localhost:7777 (when running)
 - **Weaviate**: http://localhost:8080
 - **Redis**: localhost:6379
 
@@ -242,11 +306,47 @@ volumes:
 
 ## 📖 Usage
 
-### 💬 Basic Interaction
+### Obsidian Plugin Usage
 
-1. Access Web UI (http://localhost:3000)
-2. Enter questions in the chat interface
-3. Aoi searches the knowledge base and provides answers
+1. **Open Command Palette**: `Ctrl/Cmd + P`
+2. **Search for Aoi commands**:
+   - `Aoi: Chat with Agent` - Start conversation
+   - `Aoi: Analyze Current Note` - Analyze active note
+   - `Aoi: Generate Summary` - Create note summary
+   - `Aoi: Memory Sync` - Sync cross-platform memory
+
+3. **Personality System**:
+   - Configure agent personality in plugin settings
+   - Adaptive responses based on your interaction style
+   - Consistent personality across platforms
+
+### Browser Extension Usage
+
+1. **Click Extension Icon** in browser toolbar
+2. **Context-Aware Assistance**:
+   - Analyze current webpage content
+   - Extract and summarize information
+   - Generate insights from web content
+
+3. **Cross-Platform Memory**:
+   - Seamlessly access Obsidian notes
+   - Sync insights across platforms
+   - Maintain conversation context
+
+### Core Agent API Usage
+
+```python
+import requests
+
+# Send message to agent
+response = requests.post('http://localhost:7777/chat', json={
+    'message': 'Analyze this code snippet',
+    'context': 'python development',
+    'platform': 'api'
+})
+
+print(response.json())
+```
 
 ### 🔍 Knowledge Base Search
 
@@ -258,6 +358,13 @@ agent = AoiAgent()
 response = agent.search_knowledge("Tell me about machine learning")
 print(response)
 ```
+
+### Advanced Features
+
+- **Cross-Platform Memory**: Seamless context sharing between Obsidian, browser, and API
+- **Adaptive Personality**: Consistent AI personality that learns from your interactions
+- **Evidence-Based Responses**: All insights backed by your knowledge base
+- **Real-time Sync**: Instant synchronization across all platforms
 
 ### 🛠️ Adding Custom Tools
 

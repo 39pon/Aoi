@@ -1,169 +1,168 @@
-# 葵（Aoi）- 万能型AIエージェントエコシステム
+# 葵（Aoi）- クロスプラットフォームAIエージェントエコシステム
 
-![Aoi Logo](https://img.shields.io/badge/Aoi-万能型AIエージェント-blue?style=for-the-badge)
+**[English](README.md) | 日本語**
+
+![Aoi Logo](https://img.shields.io/badge/Aoi-クロスプラットフォームAI-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-実装完了-green?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.11+-green?style=flat-square)
-![Agno](https://img.shields.io/badge/Agno-Framework-orange?style=flat-square)
-![Gemini](https://img.shields.io/badge/Gemini-LLM-purple?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=flat-square)
+![Obsidian](https://img.shields.io/badge/Obsidian-Plugin-purple?style=flat-square)
+![Browser](https://img.shields.io/badge/Browser-Extension-orange?style=flat-square)
 
 ## 📖 概要
 
-**葵（Aoi）** は、最新のAI技術を統合した万能型AIエージェントエコシステムです。Agnoフレームワークをベースに、Gemini LLM、Weaviate、Jina、Redis、Obsidianを組み合わせて、高性能で拡張性の高いAIエージェントを実現します。
+**葵（Aoi）** は、複数のプラットフォームで一貫したAI体験を提供するクロスプラットフォームAIエージェントエコシステムです。Obsidianプラグイン、ブラウザ拡張機能、Core Agentを通じて、どこからでもアクセス可能な統合されたAIアシスタントを実現します。
 
 ### 🎯 主な特徴
 
-- **🤖 万能型エージェント**: あらゆるタスクに対応可能な汎用AIエージェント
-- **🧠 高度な推論**: Agnoフレームワークによる高性能な推論機能
-- **📚 知識ベース**: Obsidianで管理された.mdファイルからの知識抽出
-- **🔍 ベクトル検索**: Weaviate + Jinaによる高精度な意味検索
-- **💾 セッション管理**: Redisによる永続的な会話履歴管理
-- **🌐 Web UI**: 直感的で美しいユーザーインターフェース
+- **🔗 クロスプラットフォーム統合**: Obsidian、ブラウザ、APIで一貫したAI体験
+- **🧠 インテリジェントメモリシステム**: プラットフォーム間で共有される永続的なメモリ
+- **🎭 適応型パーソナリティ**: ユーザーの操作スタイルに適応する一貫したAIペルソナ
+- **📚 知識ベース統合**: Obsidianノートとの深い統合による文脈理解
+- **🔍 エビデンスベースAI**: すべての回答が知識ベースに基づく信頼性の高いAI
+- **⚡ リアルタイム同期**: プラットフォーム間での瞬時の情報同期
 
 ## ⚡ 機能
 
 ### 🔧 コア機能
 
-- **マルチモーダル対応**: テキスト、画像、音声、動画の処理
-- **リアルタイム推論**: 高速な応答生成と意思決定
-- **知識統合**: Obsidianボルトからの自動知識抽出
-- **セッション永続化**: 長期記憶による文脈理解
-- **カスタムツール**: 拡張可能なツールシステム
+- **クロスプラットフォーム統合**: Obsidian、ブラウザ、APIでの統一されたAI体験
+- **インテリジェントメモリシステム**: プラットフォーム間で共有される永続的なコンテキスト
+- **適応型パーソナリティ**: ユーザーの操作パターンに学習・適応するAIペルソナ
+- **知識ベース統合**: Obsidianノートからの自動知識抽出と活用
+- **エビデンスベースAI**: 知識ベースに基づく信頼性の高い回答生成
+- **リアルタイム同期**: プラットフォーム間での瞬時の情報同期
+
+### 🌐 プラットフォーム統合
+
+- **📝 Obsidianプラグイン**: ノート作成・分析・要約機能
+- **🌐 ブラウザ拡張機能**: Webページの文脈理解とインサイト生成
+- **🔗 Webインターフェース**: 統合ダッシュボードとAPI管理
+- **💾 クロスプラットフォームメモリ**: 全プラットフォーム間での記憶共有
+- **📊 統合ダッシュボード**: 全体的な使用状況とインサイトの可視化
 
 ### 🛠️ 技術スタック
 
 | コンポーネント | 技術 | 用途 |
 |---------------|------|------|
-| **AIフレームワーク** | Agno | エージェント基盤 |
-| **LLM** | Google Gemini | 言語モデル |
-| **ベクトルDB** | Weaviate | 意味検索 |
-| **エンベッディング** | Jina | ベクトル化 |
-| **データベース** | Redis | セッション管理 |
-| **知識管理** | Obsidian | .mdファイル管理 |
-| **UI** | Next.js | Webインターフェース |
-| **インフラ** | Docker | コンテナ化 |
+| **Obsidianプラグイン** | TypeScript | ノート統合・メモリ管理 |
+| **ブラウザ拡張** | JavaScript/TypeScript | Web統合・コンテキスト抽出 |
+| **Core Agent** | Python/Agno | AI推論・API提供 |
+| **LLM** | Google Gemini | 言語理解・生成 |
+| **ベクトルDB** | Weaviate | 意味検索・知識管理 |
+| **エンベッディング** | Jina | テキストベクトル化 |
+| **データベース** | Redis | セッション・メモリ管理 |
+| **インフラ** | Docker | コンテナ化・デプロイ |
 
 ## 🏗️ アーキテクチャ
 
 ```
-葵（Aoi）エコシステム
-┌─────────────────────────────────────────────────────────┐
-│                    Web UI (Next.js)                    │
-├─────────────────────────────────────────────────────────┤
-│                  API Gateway (FastAPI)                 │
-├─────────────────────────────────────────────────────────┤
-│                 Aoi Agent (Agno Core)                  │
-├─────────────────┬─────────────────┬─────────────────────┤
-│   Gemini LLM    │  Vector Search  │   Session Store     │
-│   (Reasoning)   │  (Weaviate+Jina)│     (Redis)        │
-├─────────────────┴─────────────────┴─────────────────────┤
-│              Knowledge Base (Obsidian)                 │
-└─────────────────────────────────────────────────────────┘
+葵（Aoi）クロスプラットフォームエコシステム
+┌─────────────────────────────────────────────────────────────────┐
+│                    クロスプラットフォームレイヤー                      │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│  Obsidianプラグイン │   ブラウザ拡張機能   │      Webインターフェース      │
+│   (TypeScript)  │  (JavaScript)   │       (Next.js)           │
+├─────────────────┴─────────────────┴─────────────────────────────┤
+│                      統合メモリシステム                           │
+│              (クロスプラットフォーム同期・永続化)                    │
+├─────────────────────────────────────────────────────────────────┤
+│                     Core Agent (Python)                       │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│   Gemini LLM    │  Vector Search  │      Session Store          │
+│   (推論・生成)    │ (Weaviate+Jina) │       (Redis)              │
+├─────────────────┴─────────────────┴─────────────────────────────┤
+│                   Knowledge Base (Obsidian)                   │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ### 📁 ディレクトリ構造
 
 ```
 Aoi/
-├── agent-ui/                 # Next.js Webインターフェース
-│   ├── src/
-│   │   ├── components/        # UIコンポーネント
-│   │   ├── pages/            # ページ定義
-│   │   └── store/            # 状態管理
-│   └── package.json
+├── obsidian-plugin/          # Obsidianプラグイン (TypeScript)
+│   ├── main.ts              # プラグインメイン
+│   ├── memory-client.ts     # メモリシステム統合
+│   ├── personality.ts       # パーソナリティシステム
+│   └── manifest.json        # プラグイン設定
+├── browser-extension/        # ブラウザ拡張機能
+│   ├── manifest.json        # 拡張機能設定
+│   ├── content-script.js    # コンテンツスクリプト
+│   ├── background.js        # バックグラウンドスクリプト
+│   └── popup/              # ポップアップUI
 ├── services/
-│   └── aoi-agent/            # Python Agnoサービス
+│   └── core-agent/          # Core Agent (Python)
 │       ├── src/
-│       │   ├── agent/        # エージェント実装
-│       │   ├── knowledge/    # 知識ベース管理
-│       │   ├── tools/        # カスタムツール
-│       │   └── api/          # FastAPI routes
+│       │   ├── agent/       # エージェント実装
+│       │   ├── memory/      # メモリシステム
+│       │   ├── adapters/    # プラットフォームアダプター
+│       │   └── api/         # FastAPI routes
 │       ├── requirements.txt
-│       ├── Dockerfile
-│       └── .env.example
-├── obsidian-data/            # 知識ベース（.mdファイル）
-├── docker-compose.yml        # インフラ設定
-├── README.md                 # 英語版ドキュメント
-├── README.ja.md             # 日本語版ドキュメント
-└── .env.example             # 環境変数テンプレート
+│       └── config.py        # 設定管理
+├── agent-ui/                # Webインターフェース (Next.js)
+│   ├── src/
+│   │   ├── components/      # UIコンポーネント
+│   │   ├── pages/          # ページ定義
+│   │   └── store/          # 状態管理
+│   └── package.json
+├── docker-compose.yml       # インフラ設定
+├── README.md               # 英語版ドキュメント
+├── README.ja.md           # 日本語版ドキュメント
+└── .env.example           # 環境変数テンプレート
 ```
 
 ## 🚀 クイックスタート
 
 ### 📋 前提条件
 
-- **Python 3.11+**
-- **Node.js 18+**
-- **Docker & Docker Compose**
-- **Git**
+- **Python 3.8+** (Core Agent用)
+- **Node.js 16+** (Web UI用)
+- **Obsidian** (プラグイン使用時)
+- **モダンブラウザ** (Chrome, Firefox, Safari)
+- **OpenAI API キー**
 
-### 🔑 必要なAPIキー
+### 🚧 現在の実装状況
 
-以下のAPIキーを事前に取得してください：
-
-1. **Google AI Studio**: [Gemini API Key](https://makersuite.google.com/app/apikey)
-2. **Jina AI**: [Jina Embeddings API Key](https://jina.ai/)
-3. **Weaviate Cloud**: [Weaviate API Key](https://console.weaviate.cloud/) (オプション)
-4. **Agno**: [Agno API Key](https://app.agno.com/) (オプション)
+✅ **Obsidian Plugin** - TypeScriptで実装済み  
+✅ **Browser Extension** - 基本機能実装済み  
+✅ **Core Agent** - Python FastAPIで実装済み  
+🚧 **Web Interface** - Next.js開発中  
+✅ **Cross-Platform Memory** - 統合メモリシステム実装済み
 
 ### ⚙️ インストール手順
 
 #### 1. リポジトリのクローン
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/39pon/Aoi.git
 cd Aoi
 ```
 
-#### 2. 環境変数の設定
+#### 2. Obsidianプラグインのインストール
 
 ```bash
-# .envファイルを作成
-cp .env.example .env
-
-# 必要なAPIキーを設定
-vim .env
+# Obsidianのプラグインフォルダにコピー
+cp -r obsidian-plugin ~/.obsidian/plugins/aoi-agent/
 ```
 
-#### 3. Dockerでインフラを起動
+#### 3. ブラウザ拡張機能のインストール
+
+- **Chrome**: `chrome://extensions/` で開発者モードを有効にし、`browser-extension`フォルダを読み込み
+- **Firefox**: `about:debugging` で一時的なアドオンとして読み込み
+
+#### 4. Core Agentサービスの起動
 
 ```bash
-# Redis、Weaviateなどを起動
-docker-compose up -d
-```
-
-#### 4. Agnoエージェントサービスの起動
-
-```bash
-cd services/aoi-agent
-
-# 仮想環境の作成
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# 依存関係のインストール
+cd services/core-agent
 pip install -r requirements.txt
-
-# エージェントサービスの起動
-python src/main.py
+python simple_server.py
 ```
 
-#### 5. Web UIの起動
+#### 5. アクセス
 
-```bash
-cd agent-ui
-
-# 依存関係のインストール
-pnpm install
-
-# 開発サーバーの起動
-pnpm dev
-```
-
-#### 6. アクセス
-
-- **Web UI**: http://localhost:3000
-- **API**: http://localhost:7777
-- **Weaviate**: http://localhost:8080
-- **Redis**: localhost:6379
+- **Obsidianプラグイン**: Obsidian内でAoiコマンドを実行
+- **ブラウザ拡張機能**: ブラウザのツールバーアイコンをクリック
+- **Core Agent API**: http://localhost:8002
 
 ## ⚙️ 詳細設定
 
@@ -242,75 +241,211 @@ volumes:
 
 ## 📖 使用方法
 
-### 💬 基本的な対話
+### Obsidianプラグインでの使用
 
-1. Web UI（http://localhost:3000）にアクセス
-2. チャット画面で質問を入力
-3. 葵が知識ベースを検索して回答
+1. **プラグインの有効化**
+   - Obsidianの設定 > コミュニティプラグイン > Aoi Agentを有効化
 
-### 🔍 知識ベース検索
+2. **基本的な使い方**
+   - コマンドパレット（Ctrl/Cmd + P）で「Aoi」と入力
+   - ノート内でAoiコマンドを実行
+   - 選択したテキストに対してAIアシスタンスを受ける
 
-```python
-# Python APIでの直接利用例
-from aoi_agent import AoiAgent
+3. **メモリ機能**
+   - 会話履歴が自動的に保存される
+   - 過去の文脈を考慮した応答を受ける
 
-agent = AoiAgent()
-response = agent.search_knowledge("機械学習について教えて")
-print(response)
+### ブラウザ拡張機能での使用
+
+1. **拡張機能の起動**
+   - ブラウザのツールバーでAoiアイコンをクリック
+   - ポップアップウィンドウが開く
+
+2. **Webページとの連携**
+   - 現在のページ内容を自動的に認識
+   - ページに関する質問や要約を依頼
+   - 選択したテキストに対する詳細な説明を取得
+
+### Core Agent APIの直接利用
+
+```bash
+# チャット API
+curl -X POST http://localhost:8002/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello, Aoi!", "platform": "api"}'
+
+# メモリ検索 API
+curl -X GET http://localhost:8002/memory/search?query=検索語
+
+# パーソナリティ設定 API
+curl -X POST http://localhost:8002/personality \
+  -H "Content-Type: application/json" \
+  -d '{"traits": ["helpful", "analytical"]}'
 ```
 
-### 🛠️ カスタムツールの追加
+### 高度な機能
 
-```python
-# services/aoi-agent/src/tools/custom_tool.py
-from agno.tools import Tool
+#### クロスプラットフォームメモリ
+- Obsidian、ブラウザ、APIでの会話が統合される
+- 一つのプラットフォームでの学習が他でも活用される
+- 文脈の継続性が保たれる
 
-class CustomTool(Tool):
-    def __init__(self):
-        super().__init__(name="custom_tool", description="カスタムツール")
-    
-    def execute(self, query: str) -> str:
-        # カスタム処理
-        return f"処理結果: {query}"
-```
+#### 適応型パーソナリティ
+- ユーザーの使用パターンに応じてAIの応答スタイルが調整される
+- プラットフォーム固有の最適化が行われる
+- 個人の好みに合わせたカスタマイズが可能
+
+#### エビデンスベースの応答
+- 回答に使用した情報源が明示される
+- 信頼性の高い情報に基づく応答
+- 知識ベースとの連携による正確性の向上
+
+#### リアルタイム同期
+- 複数デバイス間での即座の同期
+- 会話状態の一貫性維持
+- オフライン時の変更も自動同期
 
 ## 🔧 開発・カスタマイズ
+
+### 🏗️ アーキテクチャの拡張
+
+#### Obsidianプラグインの拡張
+
+```typescript
+// obsidian-plugin/custom-feature.ts
+import { Plugin } from 'obsidian';
+import { MemoryClient } from './memory-client';
+
+export class CustomFeature {
+    constructor(private plugin: Plugin, private memory: MemoryClient) {}
+    
+    async executeCustomLogic(input: string): Promise<string> {
+        // カスタム機能の実装
+        return await this.memory.processWithContext(input);
+    }
+}
+```
+
+#### ブラウザ拡張機能の拡張
+
+```javascript
+// browser-extension/custom-content-script.js
+class CustomContentScript {
+    constructor() {
+        this.initializeCustomFeatures();
+    }
+    
+    initializeCustomFeatures() {
+        // ページ固有の機能を追加
+        this.addCustomUI();
+        this.setupEventListeners();
+    }
+}
+```
+
+#### Core Agentの拡張
+
+```python
+# services/core-agent/src/adapters/custom_adapter.py
+from .base_adapter import BaseAdapter
+
+class CustomAdapter(BaseAdapter):
+    def __init__(self):
+        super().__init__(platform="custom")
+    
+    async def process_message(self, message: str) -> str:
+        # カスタムプラットフォーム用の処理
+        return await self.agent.process_with_memory(message)
+```
+
+### 🎨 UI のカスタマイズ
+
+```typescript
+// agent-ui/src/components/CustomComponent.tsx
+import React from 'react';
+import { useMemoryStore } from '../store/memory';
+
+const CustomComponent: React.FC = () => {
+  const { memories, addMemory } = useMemoryStore();
+  
+  return (
+    <div className="custom-component">
+      {/* カスタムUI */}
+    </div>
+  );
+};
+
+export default CustomComponent;
+```
 
 ### 🧪 テスト実行
 
 ```bash
-# Agnoエージェントのテスト
-cd services/aoi-agent
+# Core Agentのテスト
+cd services/core-agent
 pytest tests/
 
 # Web UIのテスト
 cd agent-ui
-pnpm test
+npm test
+
+# Obsidianプラグインのテスト
+cd obsidian-plugin
+npm test
 ```
 
 ### 📊 監視・ログ
 
-- **Agno Dashboard**: https://app.agno.com/
-- **ログファイル**: `services/aoi-agent/logs/`
+- **ログファイル**: `services/core-agent/logs/`
 - **メトリクス**: Prometheus + Grafana（オプション）
+- **デバッグ**: ブラウザ開発者ツール
 
 ## 🤝 コントリビューション
 
+### 🐛 バグ報告
+
+1. [Issues](https://github.com/39pon/Aoi/issues) で既存の報告を確認
+2. 新しいIssueを作成
+3. 再現手順、期待される動作、実際の動作を記載
+4. 使用しているプラットフォーム（Obsidian/Browser/API）を明記
+
+### ✨ 機能提案
+
+1. [Discussions](https://github.com/39pon/Aoi/discussions) で議論
+2. 機能の詳細、用途、実装案を提案
+3. どのプラットフォームに影響するかを明記
+4. コミュニティからのフィードバックを収集
+
+### 🔧 プルリクエスト
+
 1. フォークしてブランチを作成
-2. 変更を実装
-3. テストを実行
+2. 変更を実装（適切なプラットフォームで）
+3. テストを追加・実行
 4. プルリクエストを作成
+5. 変更内容とテスト結果を詳細に記載
 
 ## 📄 ライセンス
 
 MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 
+## 🙏 謝辞
+
+- [Obsidian](https://obsidian.md/) - 知識管理プラットフォーム
+- [TypeScript](https://www.typescriptlang.org/) - 型安全なJavaScript
+- [FastAPI](https://fastapi.tiangolo.com/) - 高性能Webフレームワーク
+- [Next.js](https://nextjs.org/) - Reactフレームワーク
+- [Google Gemini](https://ai.google.dev/) - AI技術プラットフォーム
+
 ## 🆘 サポート
 
-- **Issues**: [GitHub Issues](https://github.com/your-repo/aoi/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/aoi/discussions)
-- **Documentation**: [Wiki](https://github.com/your-repo/aoi/wiki)
+- **Issues**: [GitHub Issues](https://github.com/39pon/Aoi/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/39pon/Aoi/discussions)
+- **Documentation**: [Wiki](https://github.com/39pon/Aoi/wiki)
 
 ---
 
 **葵（Aoi）で、AIエージェントの新しい可能性を探求しましょう！** 🚀✨
+
+> 「知識は力なり。しかし、知識を活用する知恵こそが真の力である。」
+> 
+> Aoiは、あなたの知識を単に保存するだけでなく、それを活用し、成長させ、あなたの思考を拡張するパートナーです。
