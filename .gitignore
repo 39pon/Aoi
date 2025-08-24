@@ -220,3 +220,35 @@ docs/_build/
 # Translations
 *.mo
 *.pot
+
+# Security and sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+.encryption_key
+encryption_key
+*.secret
+*.secrets
+
+# Configuration files with sensitive data
+integration_settings.json
+platforms.json
+sync_rules.json
+test_config/
+
+# Personal and local paths
+**/test_config/
+**/sync/
+
+# API keys and tokens (additional patterns)
+*api_key*
+*token*
+*secret*
+*password*
+
+# User-specific data
+user_data/
+personal/
+local_settings/

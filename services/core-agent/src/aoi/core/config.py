@@ -5,10 +5,11 @@
 import os
 from typing import Optional, Dict
 from pydantic import BaseModel, Field, ConfigDict
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 # Load environment variables from .env file
-load_dotenv("/Users/39pon/dev/trae/Aoi/services/core-agent/.env")
+# Try to load from current directory first, then parent directories
+load_dotenv(find_dotenv())
 
 
 class AoiConfig(BaseModel):
@@ -107,7 +108,7 @@ class AoiConfig(BaseModel):
     request_timeout: int = Field(default=30, env="REQUEST_TIMEOUT")
     
     model_config = ConfigDict(
-        env_file="/Users/39pon/dev/trae/Aoi/services/core-agent/.env",
+        env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=False
     )
